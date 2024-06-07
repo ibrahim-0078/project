@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@700&family=Varela+Round&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #000;
+    color: #fff;   
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.logo{
+    /* img color changed black to white */
+    filter: invert(1);   
+}
+/* left  */
+.left{
+    width: 23vw;
+    margin: 0.5rem;
+}
+.home{
+    background-color: #121212;
+    border-radius: 10px;
+    padding: 1rem;
+    height: 22vh;
+}
+.home ul li{
+    display: flex;
+    width: 1rem;
+    gap: 15px;
+    padding-top: 1.6rem;
+    cursor: pointer;
+}
+.library{
+    background-color: #121212;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    height: 61vh;
+}
+.library .playList{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+.library .playList img{
+    width: 1.5rem;
+    cursor: pointer;
+}
+.library .playList p{
+    margin-top: 0.2rem;
+}
+
+.right{
+    width: 77vw;
+    background-color: #121212;
+    border-radius: 10px;
+    margin: 0.5rem 0.2rem 0.5rem 0;
+    /* for playBar */
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
+    padding: 0.5rem;
+    height: 48px;
+}
+.header .nav{
+    margin-top: 0.7rem ;
+}
+.btn > *{
+    padding: 1rem 2rem 1rem 0;
+}
+.signBtn{
+    background-color: rgb(34, 34, 34);
+    color: #a7a7a7;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.signBtn:hover{
+    font-size: 17px;
+    color: #fffffff0;
+}
+.logBtn{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3rem;
+    padding: 0.8rem;
+    width: 6.3rem;
+    transition: 0.3s ease-in;
+}
+.logBtn:hover{
+    background-color: #fffffff0;
+    font-weight: bold;
+    font-size: 17px;
+}
+/* spotifyCard */
+.spotifyPlayLists h1{
+    padding: 0.7rem;
+}
+.spotifyPlayLists .cardContainer{
+    margin: 1.2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.spotifyPlayLists .cardContainer .card{
+    width: 11rem;
+    background-color: #252525;
+    padding: 0.7rem;
+    border-radius: 6px;
+    /* for playBtn */
+    position: relative;
+}
+.spotifyPlayLists .cardContainer .card img{
+    width: 100%;
+    object-fit: contain;
+}
+.card > *{
+    padding-top: 0.2rem;
+}
+.playBtn{
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    right: 18px;
+    top: 150px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+/* bottom playBar */
+.playBar{
+    position: absolute;
+    bottom: 8px;
+    background: rgb(34, 34, 34);
+    border-radius: 10px;
+    padding: 13px;
+    height: 30px;
+    width: 72vw;
+    display: flex;
+    justify-content: space-between;
+}
+.songBtns{
+    position: fixed;
+    left: 750px;
+}
+.songBtns i{
+    cursor: pointer;
+    margin: 0px 10px; 
+    font-size: 20px;
+}
+/* seekBar */
+.seekBar{
+    height: 4px;
+    width: 97%;
+    background-color:  rgba(255, 255, 255, 0.564);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    margin: 6.3px;
+    cursor: pointer;
+}
+.circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255); ;
+    position: relative;
+    bottom: 4.3px;
+    left: 0%;
+    transition: left 0.5s;
+}
+.songInfo{
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+/* .songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+} */
+
+/* left songMenu */
+.songMenu{
+    border: 1px solid #B3B3B3;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.songMenu .play i{
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+.songMenu span{
+    font-size: 12px;
+    color: #ffffffdc;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* scrollBar in songMenu*/
+.scroll{
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+.scroll::-webkit-scrollbar{
+    width: 5px;
+
+}
+.scroll::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+    background-color: rgb(101, 100, 100);
+}
